@@ -43,16 +43,16 @@ include <cybertruck_supports.scad>
  * openscad -o cybertruck_top.stl C:\<input path>\cybertruck.scad
  * See README for more information.
  */
-PRINT_TOP = true;
+PRINT_TOP = false;
 PRINT_BOTTOM = true;
-PRINT_POWER_BUTTON = true;
-PRINT_WHEEL = true;
-PRINT_WHEEL_JOINT = true;
-PRINT_SERVO_ATTACH_DIRECTION = true;
-PRINT_SERVO_ATTACH_MOTOR = true;
-PRINT_GEAR = true;
-PRINT_HEADLIGHTS = true;
-PRINT_TAILLIGTHS = true;
+PRINT_POWER_BUTTON = false;
+PRINT_WHEEL = false;
+PRINT_WHEEL_JOINT = false;
+PRINT_SERVO_ATTACH_DIRECTION = false;
+PRINT_SERVO_ATTACH_MOTOR = false;
+PRINT_GEAR = false;
+PRINT_HEADLIGHTS = false;
+PRINT_TAILLIGTHS = false;
 
 
 
@@ -160,7 +160,7 @@ module DEBUG() {
     }
 }
 
-DEBUG();
+
 
 
 
@@ -218,6 +218,9 @@ tailLight();
 
 
 
+
+
+DEBUG();
 
 
 

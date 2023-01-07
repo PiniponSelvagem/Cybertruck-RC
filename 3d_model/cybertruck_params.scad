@@ -128,6 +128,8 @@ SCREW_FILL_SIZE     = [ [8, 10,  14   ], [8,  10,  14  ] ];
 
 
 /* DEBUG */
+// set 0 or false to disable, 1 or true to enable
+// except for DEBUG_WHEEL_ANGLE that uses int value as degrees
 DEBUG_CYBERTRUCK   = 0;
 DEBUG_TTGO         = 0;
 DEBUG_SERVO        = [0, 0];

@@ -62,6 +62,25 @@ module screwToolCut() {
 }
 
 /**
+ * Back number plate placement.
+ */
+module numberPlateBack() {
+    union() {
+        translate([-104, 0, -16.4]) {
+            cube([8, 22, 8], center=true);
+
+            translate([0, 8.8, 0])
+            rotate([-12, 0, 0])
+            cube([8, 6, 6.9], center=true);
+
+            translate([0, -8.8, 0])
+            rotate([12, 0, 0])
+            cube([8, 6, 6.9], center=true);
+        }
+    }
+}
+
+/**
  * Cybertruck completed bottom part.
  */
 module cybertruckBottom() {
@@ -91,6 +110,8 @@ module cybertruckBottom() {
                     translate(SERVO_POSITION[1] + SERVO_CABLE_CUT_POSITION_OFFSET[1]) {   // cable
                         cube(SERVO_CABLE_CUT_SIZE[1], center=true);
                     }
+
+                    numberPlateBack();
 
                     screwToolCut();
                 }
