@@ -54,6 +54,8 @@ PRINT_GEAR = false;
 PRINT_HEADLIGHTS = false;
 PRINT_TAILLIGTHS = false;
 
+GENERATE_FOR_PREVIEW = false;    // if true, will disable printing supports
+
 
 
 
@@ -168,16 +170,20 @@ module DEBUG() {
 if (PRINT_TOP)
 union() {   // TOP
     cybertruckTop();
-    cybertruckTop_supports();
-    support_tailLight_inside();
-    support_headLight_inside();
+    if (!GENERATE_FOR_PREVIEW) {
+        cybertruckTop_supports();
+        support_tailLight_inside();
+        support_headLight_inside();
+    }
 }
 
 
 if (PRINT_BOTTOM)
 union() {   // BOTTOM
     cybertruckBottom();
-    cybertruckBottom_supports();
+    if (!GENERATE_FOR_PREVIEW) {
+        cybertruckBottom_supports();
+    }
 }
 
 
@@ -215,7 +221,7 @@ headLight();
 
 if (PRINT_TAILLIGTHS)
 tailLight();
-
+/* ----------------------------------- */
 
 
 
