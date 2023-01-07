@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- https://mycolor.space/?hex=%235994CE&sub=1 -->
+    <color name="cyber_blue_dark">#FF3A4E93</color>
+    <color name="cyber_blue">#FF5C58B6</color>
+    <color name="cyber_blue_green">#FF5994CE</color>
+    <color name="cyber_pink">#FFB957CE</color>
+    <color name="cyber_red">#FFE16C6B</color>
+    <color name="cyber_orange">#FFD3775A</color>
+    <color name="cyber_yellow">#FFEEE8A9</color>
+    <color name="cyber_green">#FF77FAC6</color>
+    <color name="cyber_grey">#FF3D4856</color>
+
+    <color name="background">@color/black</color>
+    <color name="cyber_accent">@color/cyber_blue_green</color>
+
+    <color name="seek_bar">@color/cyber_blue_dark</color>
+    <color name="seek_thumb">@color/cyber_pink</color>
+
+    <color name="btn_connect">@color/cyber_accent</color>
+    <color name="btn_connecting">@color/cyber_pink</color>
+    <color name="btn_disconnect">@color/cyber_blue</color>
+
+    <color name="btn_idle">@color/cyber_accent</color>
+    <color name="btn_press">@color/cyber_pink</color>
+    <color name="btn_disabled">@color/cyber_grey</color>
+    <color name="btn_speed_lock">@color/cyber_red</color>
+
+    <color name="btn_light_active">@color/cyber_green</color>
+    <color name="btn_light_blink_on">@color/cyber_yellow</color>
+    <color name="btn_light_blink_off">@color/cyber_orange</color>
+
+    <color name="txt_battery_high">@color/cyber_green</color>
+    <color name="txt_battery_medium">@color/cyber_yellow</color>
+    <color name="txt_battery_low">@color/cyber_red</color>
+    <color name="txt_battery_critical">@color/cyber_pink</color>
+</resources>

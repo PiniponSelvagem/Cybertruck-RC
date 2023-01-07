@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BATT"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_direction"
+        app:layout_constraintEnd_toEndOf="@+id/layout_direction"
+        app:layout_constraintStart_toStartOf="@+id/layout_direction" />
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_dashboard"
+        app:layout_constraintEnd_toStartOf="@+id/layout_dashboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_signals_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/turn_signals_left_btn"
+            android:text="Left"
+            android:textSize="@dimen/btn_text_small" />
+
+
+        <Button
+            android:id="@+id/btn_signals_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/turn_signals_right_btn"
+            android:text="Right"
+            android:textSize="@dimen/btn_text_small" />
+
+        <Button
+            android:id="@+id/btn_high_beam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/high_beam_btn"
+            android:text="High"
+            android:textSize="@dimen/btn_text_small" />
+
+        <Button
+            android:id="@+id/btn_low_beam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/low_beam_btn"
+            android:text="Low"
+            android:textSize="@dimen/btn_text_small" />
+
+        <Button
+            android:id="@+id/btn_brake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/brake_system_warning_btn"
+            android:text="Brake"
+            android:textSize="@dimen/btn_text_small" />
+
+        <Button
+            android:id="@+id/btn_hazard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:insetBottom="0dp"
+            android:drawableTop="@drawable/hazard_btn"
+            android:text="Hazard"
+            android:textSize="@dimen/btn_text_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_dashboard">
+
+        <Button
+            android:id="@+id/btn_kitt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dashboard_divider"
+            android:insetTop="0dp"
+            android:text="KITT"
+            android:textSize="@dimen/btn_text_small" />
+
+        <Button
+            android:id="@+id/btn_xmas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_divider"
+            android:layout_marginTop="@dimen/dashboard_divider"
+            android:insetTop="0dp"
+            android:text="XMAS"
+            android:textSize="@dimen/btn_text_small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_angle"
+        app:layout_constraintEnd_toEndOf="@+id/seekbar_angle"
+        app:layout_constraintStart_toStartOf="@+id/seekbar_angle">
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/dashboard_divider"
+            android:text="Left" />
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="Right" />
+    </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/seekbar_angle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:max="20"
+        android:min="-20"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:splitTrack="false"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <Button
+            android:id="@+id/btn_forward"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="@dimen/dashboard_divider"
+            android:text="Forward" />
+
+        <Button
+            android:id="@+id/btn_backward"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Backward" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

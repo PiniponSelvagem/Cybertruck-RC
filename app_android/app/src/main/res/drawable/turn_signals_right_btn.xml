@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/half_overlay"
+        android:drawable="@drawable/turn_signals_right"
+        android:width="@dimen/btn_icon"
+        android:height="@dimen/btn_icon"
+        />
+
+</layer-list>
