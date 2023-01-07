@@ -17,6 +17,7 @@ Light modes:
 Oh, almost forgot... it drives.
 - Foward / Backward
 - Precision turning
+- demo: _video of demo to be added_
 
 Phone app:
 - demo: _video of app demo to be added_
