@@ -1,34 +1,4 @@
 # Cybertruck-RC
-Cybertruck bluetooth radio controlled, project for the class DI3D (Design and 3d Printing) at ISEL, Instituto Superior de Engenharia de Lisboa.
-
-This project contains the 3D model, the micro controller source code and the Android application source code.
-
-## Features
-It dances!
-- Tesla Model X light show: https://www.youtube.com/watch?v=nrMW4mIjMkw
-- Knight Rider light show: _video of KITT mode to be added_
-
-Light modes:
-- Blinkers, left, right and hazards
-- Low beam
-- Hight beam
-- Brake
-
-Oh, almost forgot... it drives.
-- Foward / Backward
-- Precision turning
-
-Phone app:
-- demo: _video of app demo to be added_
-<br>
-
-![Cybertruck RC](https://raw.githubusercontent.com/PiniponSelvagem/Cybertruck-RC/main/photos/YT_picture_below-2mb.jpg)
-
-# 3D model
-Created using OpenScad 2021.01, based of Tesla Cybertruck.<br>
-The main file is **cybertruck.scad**, located at **3d_model** folder.<br>
-It used PolyGear by Dario Pellegrini, https://github.com/dpellegr/PolyGear, for the back servo / motor to drive both wheels at same time.
-
 # Microcontroller
 The Cybertruck is controlled by a TTGO T-Beam v1.1 via Bluetooth.<br>
 The TTGO T-Beam is running micropython, that can be found at https://github.com/nunomcruz/pycom-micropython-sigfox, ported by Nuno Cruz.
@@ -65,16 +35,3 @@ Pins used: (counting while looking from the front, and from the passenger side t
 - Pin 13 - Taillight middle
 - Pin 22 - Taillight right middle
 - Pin 21 - Taillight right
-
-# Android Application
-Android application targeted for Android 5.1 or above.
-
-**Currently the TTGO Bluetooth mac address is hardcoded, this should get fixed in a later version with a nearby bluetooth device list.**
-
-Full control of the Cybertruck, with the added spirit of the cyber / neon colored app theme.
-
-Known bugs:
-- Hardcodded TTGO bluetooth mac address.
-- If the hazards button is the first on to be pressed, sometimes it can lock other dashboard buttons interactions until app restart.
-- Concurrency is not 100% safe, since it can happen to have conflicting light configurations, this is a rare occurance and a simple app restart can fix it.
-- When dancing, if around 5 or more light configurations of 100ms delay get send to the TTGO, the microcontroller buffers can get full and the light configuration will be skipped. This is down to the developer to be carefull when creating dances. It is not recommented to send light configurations with less than 100ms delay, since they can / will be lost.
