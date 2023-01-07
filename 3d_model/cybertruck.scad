@@ -31,6 +31,32 @@ include <cybertruck_ttgo.scad>
 include <cybertruck_supports.scad>
 
 
+/**
+ * PREPARING FOR PRINT:
+ * 1 - only set to true one at a time
+ * 2 - generate the STL for each piece
+ * 3 - print
+ *
+ * NOTE:
+ * If you are using the GUI to generate the STLs, OpenScad might fail when generating
+ * the TOP part for the Cybertruck. If that happens, use the command line.
+ * openscad -o cybertruck_top.stl C:\<input path>\cybertruck.scad
+ * See README for more information.
+ */
+PRINT_TOP = true;
+PRINT_BOTTOM = true;
+PRINT_POWER_BUTTON = true;
+PRINT_WHEEL = true;
+PRINT_WHEEL_JOINT = true;
+PRINT_SERVO_ATTACH_DIRECTION = true;
+PRINT_SERVO_ATTACH_MOTOR = true;
+PRINT_GEAR = true;
+PRINT_HEADLIGHTS = true;
+PRINT_TAILLIGTHS = true;
+
+
+
+
 
 /**
  * Debug view, set active views using parameters with prefix 'DEBUG'.
@@ -139,41 +165,56 @@ DEBUG();
 
 
 /* -------------- PRINT -------------- */
-/*
+if (PRINT_TOP)
 union() {   // TOP
     cybertruckTop();
     cybertruckTop_supports();
     support_tailLight_inside();
     support_headLight_inside();
 }
-*/
 
 
+if (PRINT_BOTTOM)
 union() {   // BOTTOM
     cybertruckBottom();
     cybertruckBottom_supports();
 }
 
 
-//powerButton();
+if (PRINT_POWER_BUTTON)
+powerButton();
 
 
-//wheel();
-
-//wheelJoint_atWheel();
-
-//servoAttachTurning();
-
-//gearAtAxle();
-//gearAtServo();
+if (PRINT_WHEEL)
+wheel();
 
 
+if (PRINT_WHEEL_JOINT)
+wheelJoint_atWheel();
 
 
-//powerButton();
+if (PRINT_SERVO_ATTACH_DIRECTION)
+servoAttachTurning();
 
-//headLight();
-//tailLight();
+
+if (PRINT_GEAR)
+gearAtAxle();
+
+
+if (PRINT_SERVO_ATTACH_MOTOR)
+gearAtServo();
+
+
+if (PRINT_POWER_BUTTON)
+powerButton();
+
+
+if (PRINT_HEADLIGHTS)
+headLight();
+
+
+if (PRINT_TAILLIGTHS)
+tailLight();
 
 
 
