@@ -21,7 +21,7 @@ Oh, almost forgot... it drives.
 
 <br>
 
-![Cybertruck RC](https://raw.githubusercontent.com/PiniponSelvagem/Cybertruck-RC/main/photos/YT_picture_below-2mb.jpg)
+![Cybertruck RC](https://raw.githubusercontent.com/PiniponSelvagem/Cybertruck-RC/main/photos/YT_xmas_picture_below-2mb.jpg)
 
 # 3D model
 Created using OpenScad 2021.01, based of Tesla Cybertruck.<br>
