@@ -54,14 +54,15 @@ Due to board PINs limitation, the UART and I2C cannot be used while the LEDs are
 UART can be used to get a USB terminal, by during boot checking if the user is pressing the middle button of the TTGO. This will enter in a "debug" mode, by not configuring the UART PINs as output for the LEDs. It also looks cool while transfering data.<br>
 I2C is used to keep track of the battery level, every minute the 2 LEDs at PINs 21 and 22 get their configuration reset to I2C, the percentage is calculated and then the PINs are set back to output. Barelly noticable while normal operation of the LEDs, unless you know exactly what to look for.
 
-Pins used: (counting while looking from the front, and from the passenger side to the driver side)
-- Pin 1 - Headlight left
-- Pin 3 - Headlight left middle
+Pins used: (counting while looking from the front, and from the passenger side to the driver side)<br>
+Head lights:
+- Pin 01 - Headlight left
+- Pin 03 - Headlight left middle
 - Pin 23 - Headlight middle
-- Pin 4 - Headlight right middle
-- Pin 0 - Headlight right
-<br>
-<br>
+- Pin 04 - Headlight right middle
+- Pin 00 - Headlight right
+
+Tail lights:
 - Pin 15 - Taillight left
 - Pin 14 - Taillight left middle
 - Pin 13 - Taillight middle
